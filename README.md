@@ -39,6 +39,70 @@ run "unzip unzip awscliv2.zip " on your local terminal
 run "sudo ./aws/install"
 <img width="690" height="41" alt="Screenshot 2025-08-08 at 3 48 52 pm" src="https://github.com/user-attachments/assets/495522b3-b239-47f7-9a49-0f59bd8ff271" />
 
+After installing AWS CLI, you should verify the installation by checking its version. If the installation was successful, this command will display the installed AWS CLI version along with Python version and OS details. This confirms that AWS CLI is ready to use on your system.
+"aws --version"
+
+<img width="704" height="38" alt="Screenshot 2025-08-08 at 3 49 45 pm" src="https://github.com/user-attachments/assets/463a279c-2e5c-4674-ab58-d141b47398e0" />
+
+The next step is to install Terraform, but before we begin, we must update our system’s package list to ensure we get the latest versions of available packages.
+"sudo apt update"
+
+
+<img width="803" height="197" alt="Screenshot 2025-08-08 at 4 05 22 pm" src="https://github.com/user-attachments/assets/d3b4bf4d-f271-460a-8fdc-8b24976df57a" />
+
+ Install Terraform on Linux (Ubuntu/Debian) Update system
+"sudo apt update && sudo apt install -y gnupg software-properties-common curl"
+
+<img width="1338" height="502" alt="Screenshot 2025-08-08 at 4 08 52 pm" src="https://github.com/user-attachments/assets/52ca6123-eea2-4585-a5f1-6e837960954a" />
+
+# Add HashiCorp GPG key
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+
+<img width="1440" height="63" alt="Screenshot 2025-08-08 at 4 10 10 pm" src="https://github.com/user-attachments/assets/1c6c9b69-7b7f-4cfc-ba0b-68f167c5f4cf" />
+
+# Add official HashiCorp repo
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+<img width="1440" height="57" alt="Screenshot 2025-08-08 at 4 11 38 pm" src="https://github.com/user-attachments/assets/5a530c1f-bb9f-4a33-8ab3-52ad9ad2bc44" />
+
+
+# Install Terraform
+sudo apt update && sudo apt install -y terraform
+
+<img width="1111" height="769" alt="Screenshot 2025-08-08 at 4 12 59 pm" src="https://github.com/user-attachments/assets/aa31b58d-a50c-4327-8646-5af7a7b2db1a" />
+
+Now we have to check the terraform vassion
+
+"terraform --version
+
+<img width="838" height="82" alt="Screenshot 2025-08-08 at 4 18 35 pm" src="https://github.com/user-attachments/assets/2e63a351-f7a3-4be8-9428-ea9b5169bef9" />
+
+Now we have to create a directry for the terraform.
+
+"mkdir terraform-ec2-ami"
+
+<img width="957" height="25" alt="Screenshot 2025-08-08 at 4 28 50 pm" src="https://github.com/user-attachments/assets/6c4314bc-f28f-4c4d-9f39-80240ebff916" />
+
+the next thing is to cd in to the directry 
+"cd terraform-ec2-ami"
+<img width="715" height="26" alt="Screenshot 2025-08-08 at 4 29 50 pm" src="https://github.com/user-attachments/assets/b1c6f399-f241-466d-b0ee-fb83aa9e1dc3" />
+
+nano main.tf
+<img width="840" height="28" alt="Screenshot 2025-08-08 at 4 39 08 pm" src="https://github.com/user-attachments/assets/f6e4b586-0a1c-4daf-a8d7-bed260df2f1e" />
+
+ls to check the file main.tf
+
+<img width="848" height="47" alt="Screenshot 2025-08-08 at 4 41 45 pm" src="https://github.com/user-attachments/assets/03f3e1b6-4427-4adb-b379-c6355d861080" />
+
+cat main.tf
+
+<img width="1440" height="204" alt="Screenshot 2025-08-08 at 4 42 40 pm" src="https://github.com/user-attachments/assets/5bf4653e-7e92-4295-a5ed-702913cfe18a" />
+
+
+
+
+
+
+
 
 
 
