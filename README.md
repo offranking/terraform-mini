@@ -97,7 +97,11 @@ cat main.tf
 
 <img width="1440" height="204" alt="Screenshot 2025-08-08 at 4 42 40 pm" src="https://github.com/user-attachments/assets/5bf4653e-7e92-4295-a5ed-702913cfe18a" />
 
+This step initializes your Terraform working directory 
+"terraform init"
 
+
+<img width="911" height="404" alt="Screenshot 2025-08-09 at 12 18 09 am" src="https://github.com/user-attachments/assets/92e1705a-c31b-4450-9755-ccc309c67777" />
 
 
 
